@@ -12,8 +12,8 @@ interface SeverityPillRootProps {
 }
 
 const SeverityPillRoot = styled('span')<SeverityPillRootProps>(({ theme, ownerState }) => {
-  const backgroundColor = theme.palette[ownerState.color].contrastText;
-  const color = theme.palette.mode === 'dark' ? theme.palette[ownerState.color].main : theme.palette[ownerState.color].dark;
+  const backgroundColor = theme.palette[ownerState.color].light;
+  const color = theme.palette.mode === 'dark' ? theme.palette[ownerState.color].contrastText : theme.palette[ownerState.color].dark;
 
   return {
     alignItems: 'center',
@@ -48,9 +48,4 @@ export const SeverityPill = (props: any) => {
       {children}
     </SeverityPillRoot>
   );
-};
-
-SeverityPill.propTypes = {
-  children: PropTypes.node,
-  color: PropTypes.oneOf(['primary', 'secondary', 'error', 'info', 'warning', 'success'])
 };
