@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { styled, Theme } from '@mui/material/styles';
 
 interface SeverityPillProps {
